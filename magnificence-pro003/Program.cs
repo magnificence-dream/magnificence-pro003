@@ -19,6 +19,7 @@ namespace magnificence_pro003
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
-				.UseStartup<Startup>();
+			 .UseUrls("http://*:80", "http://*:44336")
+			 .UseStartup<Startup>();
 	}
 }
