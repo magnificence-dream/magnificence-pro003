@@ -20,7 +20,7 @@ namespace magnificence_pro003.Controllers
 		[HttpGet]
 		public ActionResult<IEnumerable<string>> Get()
 		{
-			return new string[] { "value1", "value2" ,$"{ Configuration["App:tag"] }","value321" };
+			return new string[] { "value1", "value2" ,$"{ Configuration["App:tag"] }","value3都21" };
 		}
 
 		// GET api/values/5
