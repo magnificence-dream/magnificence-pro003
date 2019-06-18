@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+   agent{
+        node{
+          label 'slave-pipeline'
+        }
+      }
   stages {
     stage('git') {
       steps {
