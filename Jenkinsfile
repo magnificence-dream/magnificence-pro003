@@ -15,18 +15,20 @@ pipeline {
       steps {
         echo 'This is a build step'
         echo 'see me ,this is magnificence'
-        sh 'docker --version'
+        sh ''' container(\'kubectl\') {
+      kubectl version
+ }'''
+        }
       }
-    }
-    stage('Test') {
-      steps {
-        echo 'This is a test step'
+      stage('Test') {
+        steps {
+          echo 'This is a test step'
+        }
       }
-    }
-    stage('Deploy') {
-      steps {
-        echo 'This is a deploy step'
+      stage('Deploy') {
+        steps {
+          echo 'This is a deploy step'
+        }
       }
     }
   }
-}
