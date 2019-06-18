@@ -15,7 +15,6 @@ pipeline {
       steps {
         echo 'This is a build step'
         echo 'see me ,this is magnificence'
-        timestamps()
         sh 'docker --version'
       }
     }
